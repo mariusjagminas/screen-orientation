@@ -1,15 +1,20 @@
 {
-  "name": "screen-orientation",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "@asmarenas/screen-orientation",
+  "version": "0.1.1",
+  "description": "displays a message when the device screen orientation is landscape",
+  "main": "./build/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mariusjagminas/screen-orientation.git"
+  },
   "keywords": [],
-  "author": "",
+  "author": "Marius Jagminas",
   "license": "ISC",
   "devDependencies": {
     "typescript": "^3.8.3"
-  }
+  },
+  "dependencies": {}
 }

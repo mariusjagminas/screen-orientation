@@ -1,3 +1,5 @@
+"use strict";
+exports.__esModule = true;
 function checkDeviceOrientation(minHeight) {
     if (minHeight === void 0) { minHeight = 500; }
     if (window.innerHeight > minHeight)
@@ -29,4 +31,4 @@ function screenOrientation(option) {
     handleOrientationChange(element, option);
     window.addEventListener('resize', handleOrientationChange.bind(null, element, option));
 }
-screenOrientation();
+exports["default"] = screenOrientation;
