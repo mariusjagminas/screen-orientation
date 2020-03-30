@@ -1,6 +1,5 @@
 import screenOrientation from './screenOrientation'
 
 screenOrientation({
-  color: "",
-  animation: true
+  fontSize: 6
 });

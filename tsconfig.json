@@ -5,7 +5,4 @@
     "sourceMap": true,
     "strict": true,
   },
-  "exclude": [
-    "./src/**/*.png"
-  ]
 }
