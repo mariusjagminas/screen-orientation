@@ -1,0 +1,69 @@
+.container_6467G9ha778hyjaag12ks {
+  position: fixed; 
+  z-index: 999999;
+  top: 0;
+  left: 0;  
+  bottom: 0;
+  right: 0;
+  display: none; 
+  justify-content: center; 
+  align-items: center; 
+  flex-direction: column
+}
+
+.text_ye754qks9js09uu45 {
+  padding: 5vw;
+  text-align: center
+}
+
+.phone_64gsteYYnL0098JdfJqiBV {
+  height: 12vw;
+  animation-name: rotation;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes rotation {
+  0% {
+    opacity: 0;
+    transform: rotateZ(90deg);
+  }
+
+  10% {
+    opacity: 1;
+  }
+  
+  30% {
+    opacity: 1;
+    transform: rotateZ(90deg);
+  } 
+  
+  40% {
+    opacity: 1;
+  }
+  
+  50% {
+    opacity: 1;
+    transform: rotateZ(0deg);    
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  70% {
+    opacity: 1
+  }
+
+  80% {
+    opacity: 1
+  }
+
+  95% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 0
+  }
+}

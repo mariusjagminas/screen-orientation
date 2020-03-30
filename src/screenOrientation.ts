@@ -1,8 +1,12 @@
+import phone from './assets/phone.svg'
+import './assets/main.css'
+
 interface Options {
   message?: string,
   color?: string,
   bgColor?: string,
-  minHeight?: number
+  minHeight?: number,
+  animation?: boolean
 }
 
 function checkDeviceOrientation(minHeight: number = 500): boolean {
@@ -15,18 +19,28 @@ function handleOrientationChange(element: HTMLElement, { minHeight }: Options) {
   element.style.display = isInLandscapeMode ? "flex" : "none";
 }
 
-function appendElementToDOM({ bgColor, message, color }: Options): HTMLElement {
-  const styles: string = "position: fixed; z-index: 999999; top: 0; left: 0; bottom: 0; right: 0; display: none; justify-content: center; align-items: center;"
-  const div: HTMLElement = document.createElement("div");
+function appendElementToDOM({ bgColor, message, color, animation = true }: Options): HTMLElement {
 
-  div.innerText = message || "Landscape orientation is not supported";
-  div.style.cssText = styles
-  div.style.backgroundColor = bgColor || "#ffff";
-  div.style.fontSize = "5vw";
-  div.style.color = color || "#00000";
-  document.body.appendChild(div);
+  const container: HTMLElement = document.createElement('div');
+  const text: HTMLElement = document.createElement("div");
+  const image: HTMLElement = document.createElement('img');
 
-  return div
+  container.className = "container_6467G9ha778hyjaag12ks"
+  container.style.backgroundColor = bgColor || "#ffff";
+
+  text.className = "text_ye754qks9js09uu45"
+  text.innerText = message || "Landscape orientation is not supported. Please rotate device screen";
+  text.style.fontSize = "5vw";
+  text.style.color = color || "#00000";
+
+  image.className = "phone_64gsteYYnL0098JdfJqiBV";
+  image.setAttribute("src", phone);
+
+  container.appendChild(text);
+  if (animation) container.appendChild(image);
+  document.body.appendChild(container);
+
+  return container
 }
 
 function screenOrientation(option: Options = {}): void {
