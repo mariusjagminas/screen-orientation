@@ -9,7 +9,8 @@ interface Params {
   minHeight?: number,
   animation?: boolean,
   fontSize?: number,
-  iconColor?: string
+  iconColor?: string,
+  iconSize?: number
 }
 
 function setParams(options: Params): Object {
@@ -20,7 +21,8 @@ function setParams(options: Params): Object {
     minHeight: 500,
     animation: true,
     fontSize: 5,
-    iconColor: "#1D1D1D"
+    iconColor: "#1D1D1D",
+    iconSize: 10
   }
 
   return Object.assign(defaulValues, options)
@@ -36,7 +38,7 @@ function handleOrientationChange(element: HTMLElement, { minHeight }: Params) {
   element.style.display = isInLandscapeMode ? "flex" : "none";
 }
 
-function appendElementToDOM({ bgColor, message, color, animation, fontSize, iconColor }: Params): HTMLElement {
+function appendElementToDOM({ bgColor, message, color, animation, fontSize, iconColor, iconSize }: Params): HTMLElement {
   const container: HTMLElement = document.createElement('div');
   const text: HTMLElement = document.createElement("div");
   const svgWrapper: HTMLElement = document.createElement('div');
@@ -50,7 +52,7 @@ function appendElementToDOM({ bgColor, message, color, animation, fontSize, icon
   text.style.color = `${color}`;
 
   svgWrapper.className = "svg_64gsteYYnL0098JdfJqiBV";
-  svgWrapper.innerHTML = svg(iconColor);
+  svgWrapper.innerHTML = svg(iconColor, iconSize);
 
   container.appendChild(text);
   if (animation) container.appendChild(svgWrapper);

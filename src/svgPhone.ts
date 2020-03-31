@@ -1,7 +1,7 @@
-const svg = (color?: string): string => {
-  return `
+const svg = (color?: string, iconSize: number = 0): string => {
+    return `
     <?xml version="1.0" encoding="UTF-8"?>
-    <svg width="10vw" height="16vw" viewBox="0 0 14 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <svg width='${iconSize}vw' height='${iconSize * 1.6}vw' viewBox="0 0 14 22" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
         <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
             <g  transform="translate(-343.000000, -2503.000000)">
                 <g  transform="translate(100.000000, 2404.000000)">
