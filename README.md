@@ -37,5 +37,7 @@ fontSize: number // The font size depends on the width of the viewport. Recommen
 bgColor: string // Background color. Default: "#ffff"
 animation: boolean // Displays the rotating phone animation. Default: true
 minHeight: number // The breakpoint in viewport height to display a message. Default: 500
+iconColor: string // Icon color. Default: "#1D1D1D"
+iconSize: number // Icon size. Default: 10
 ```
   
