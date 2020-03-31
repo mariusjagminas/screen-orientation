@@ -1,7 +1,7 @@
 {
-  "name": "@asmarenas/screen-orientation",
-  "version": "0.1.11",
-  "description": "displays a message when the device screen orientation is landscape",
+  "name": "screen-orientation-js",
+  "version": "0.1.0",
+  "description": "Shows a custom message when the mobile device's screen is in a horizontal position.",
   "main": "./dist/screen-orientation.js",
   "files": [
     "dist"
@@ -14,9 +14,15 @@
     "type": "git",
     "url": "https://github.com/mariusjagminas/screen-orientation.git"
   },
-  "keywords": [],
+  "keywords": [
+    "screen",
+    "orientation",
+    "landscape",
+    "mobile",
+    "portrait"
+  ],
   "author": "Marius Jagminas",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",
     "css-loader": "^3.4.2",
