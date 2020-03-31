@@ -1,5 +1,6 @@
 import phone from './assets/phone.svg'
 import './assets/main.css'
+import svg from './svgPhone'
 
 interface Params {
   message?: string,
@@ -7,7 +8,8 @@ interface Params {
   bgColor?: string,
   minHeight?: number,
   animation?: boolean,
-  fontSize?: number
+  fontSize?: number,
+  iconColor?: string
 }
 
 function setParams(options: Params): Object {
@@ -17,7 +19,8 @@ function setParams(options: Params): Object {
     bgColor: "#ffff",
     minHeight: 500,
     animation: true,
-    fontSize: 5
+    fontSize: 5,
+    iconColor: "#1D1D1D"
   }
 
   return Object.assign(defaulValues, options)
@@ -33,10 +36,10 @@ function handleOrientationChange(element: HTMLElement, { minHeight }: Params) {
   element.style.display = isInLandscapeMode ? "flex" : "none";
 }
 
-function appendElementToDOM({ bgColor, message, color, animation, fontSize }: Params): HTMLElement {
+function appendElementToDOM({ bgColor, message, color, animation, fontSize, iconColor }: Params): HTMLElement {
   const container: HTMLElement = document.createElement('div');
   const text: HTMLElement = document.createElement("div");
-  const image: HTMLElement = document.createElement('img');
+  const svgWrapper: HTMLElement = document.createElement('div');
 
   container.className = "container_6467G9ha778hyjaag12ks"
   container.style.backgroundColor = `${bgColor}`;
@@ -46,11 +49,11 @@ function appendElementToDOM({ bgColor, message, color, animation, fontSize }: Pa
   text.style.fontSize = `${fontSize}vw`;
   text.style.color = `${color}`;
 
-  image.className = "phone_64gsteYYnL0098JdfJqiBV";
-  image.setAttribute("src", phone);
+  svgWrapper.className = "svg_64gsteYYnL0098JdfJqiBV";
+  svgWrapper.innerHTML = svg(iconColor);
 
   container.appendChild(text);
-  if (animation) container.appendChild(image);
+  if (animation) container.appendChild(svgWrapper);
   document.body.appendChild(container);
 
   return container
