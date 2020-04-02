@@ -2,8 +2,7 @@ const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
 module.exports = {
-  mode: "production",
-  entry: './src/screenOrientation.ts',
+  entry: './src/index.ts',
   plugins: [new CleanWebpackPlugin],
   module: {
     rules: [
@@ -12,12 +11,6 @@ module.exports = {
         use: [
           'style-loader',
           'css-loader',
-        ],
-      },
-      {
-        test: /\.(png|svg|jpg|gif)$/,
-        use: [
-          'file-loader',
         ],
       },
       {
@@ -32,8 +25,8 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'screen-orientation.js',
-    library: 'screenOrientation',
+    filename: 'index.js',
+    library: 'screen-orientation-js',
     libraryTarget: 'umd'
   },
 };
