@@ -1,4 +1,3 @@
-import phone from './assets/phone.svg'
 import './assets/main.css'
 import svg from './svgPhone'
 

@@ -1,3 +1,5 @@
 import screenOrientation from './screenOrientation'
 
-screenOrientation();
+export default screenOrientation
+
+
