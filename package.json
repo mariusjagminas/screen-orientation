@@ -1,15 +1,15 @@
 {
   "name": "screen-orientation-js",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "Shows a custom message when the mobile device's screen is in a horizontal position.",
-  "main": "./dist/index.js",
+  "main": "./dist/bundle.min.js",
   "files": [
-    "dist/index.js"
+    "dist"
   ],
   "scripts": {
     "develop": "webpack --watch --mode=development",
-    "build": "webpack",
-    "prepublishOnly": "webpack"
+    "build": "webpack --mode=production",
+    "prepublishOnly": "webpack --mode=production"
   },
   "repository": {
     "type": "git",

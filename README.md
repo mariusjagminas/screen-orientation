@@ -4,27 +4,41 @@ Shows a custom message when the mobile device's screen is in a horizontal positi
 
 Some applications or websites are built to display the content only in a portrait mode. To prevent a breaking up the website's layout we can show a full screen message when the device is rotated in horizontal position.
 
-## Instalation
+## Usage
+
+### In a browser
+
+```js
+// Add <script> tag in head
+<script src="https://unpkg.com/screen-orientation-js"></script>
+  
+// Invoke screenOrientationJs with .init() method.
+<script>
+  screenOrientationJs.init({bgColor: "#2d7c72"})
+</script>
+```
+
+### In Node.js
 
 ```
 $ npm install screen-orientation-js
 ```
 
-## Usage
 ```js
-// es6 modules
-import screenOrientation from 'screen-orientation-js'
+const screenOrientationJs = require('screen-orientation-js');
+// or 
+import screenOrientationJs from 'screen-orientation-js'
 
-screenOrientation();
-
-// or with custom configuration 
-
+// Invoke with options 
 screenOrientation({
     color:  "#7c692d",
     bgColor: "#2d7c72",
     animation: false,
     fontSize: 3
 });
+
+// or without 
+screenOrientationJs();
 ```
 
 ## Options
