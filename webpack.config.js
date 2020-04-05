@@ -25,9 +25,9 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'index.js',
-    library: 'screen-orientation-js',
-    libraryTarget: 'umd'
+    filename: 'bundle.min.js',
+    library: 'screenOrientationJs',
+    libraryTarget: 'umd',
   },
 };
 

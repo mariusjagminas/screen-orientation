@@ -1,8 +1,9 @@
 # screen-orientation-js
 
-Shows a custom message when the mobile device's screen is in a horizontal position.
+Displays an animated full-screen message when the mobile device's screen is rotated horizontally.
 
-Some applications or websites are built to display the content only in a portrait mode. To prevent a breaking up the website's layout we can show a full screen message when the device is rotated in horizontal position.
+Some applications or websites may display content properly only in portrait orientation on the mobile devices. To prevent the website's layout from breaking ,  ```screen-orientation-js```  informs the user that the app can't be viewed in landscape orientation.
+  
 
 ## Instalation
 
@@ -11,24 +12,47 @@ $ npm install screen-orientation-js
 ```
 
 ## Usage
+
 ```js
-// es6 modules
-import screenOrientation from 'screen-orientation-js'
+const screenOrientationJs = require('screen-orientation-js');
+// or 
+import * as screenOrientationJs from 'screen-orientation-js';
 
-screenOrientation();
-
-// or with custom configuration 
-
-screenOrientation({
+// Initialize with custom settings
+screenOrientation.init({
     color:  "#7c692d",
     bgColor: "#2d7c72",
     animation: false,
     fontSize: 3
 });
+
+// or with default 
+screenOrientationJs.init();
+```
+
+## Using directly in a browser
+
+Place ```<script>``` tag in the  ```<head>``` section.
+
+```html
+<script src="https://unpkg.com/screen-orientation-js"></script>
+```
+
+```screenOrientationJs```  is available as a global variable, or ```window.screenOrientationJs```
+
+```html
+
+<script>
+  // init with custom settings
+  screenOrientationJs.init({bgColor: "#2d7c72"})
+  
+  // or with default 
+  screenOrientationJs.init();
+</script>
 ```
 
 ## Options
-You can override the default configuration with custom values.
+You can override the default configuration with custom settings.
 
 ```js
 message: string // A custom message. Default: "Landscape orientation is not supported. Please rotate the device screen"

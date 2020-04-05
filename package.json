@@ -1,20 +1,21 @@
 {
   "name": "screen-orientation-js",
-  "version": "0.1.2",
-  "description": "Shows a custom message when the mobile device's screen is in a horizontal position.",
-  "main": "./dist/index.js",
+  "version": "1.0.1",
+  "description": "Informs the user with an animated message that he shouldn't use the current app in landscape mode on mobile devices.",
+  "main": "./dist/bundle.min.js",
   "files": [
-    "dist/index.js"
+    "dist"
   ],
   "scripts": {
     "develop": "webpack --watch --mode=development",
-    "build": "webpack",
-    "prepublishOnly": "webpack"
+    "build": "webpack --mode=production",
+    "prepublishOnly": "webpack --mode=production"
   },
   "repository": {
     "type": "git",
     "url": "https://github.com/mariusjagminas/screen-orientation.git"
   },
+  "bugs": "https://github.com/mariusjagminas/screen-orientation-js/issues",
   "keywords": [
     "screen",
     "orientation",
@@ -22,7 +23,11 @@
     "mobile",
     "portrait"
   ],
-  "author": "Marius Jagminas",
+  "author": {
+    "name": "Marius Jagminas",
+    "email": "asmarenas@gmail.com",
+    "url": "https://mjagminas.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "clean-webpack-plugin": "^3.0.0",

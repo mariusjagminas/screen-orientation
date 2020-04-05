@@ -1,5 +1,2 @@
-import screenOrientation from './screenOrientation'
-
-export default screenOrientation
-
+export { screenOrientation as init } from './screenOrientation'
 
