@@ -14,7 +14,7 @@ interface Params {
 
 function setParams(options: Params): Object {
   const defaulValues: Params = {
-    message: "Landscape orientation is not supported. Please rotate device screen",
+    message: "Landscape view is not available. Please rotate your device",
     color: "#00000",
     bgColor: "#ffff",
     minHeight: 500,
