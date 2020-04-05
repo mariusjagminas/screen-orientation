@@ -69,6 +69,6 @@ function screenOrientation(params: Params = {}): void {
   window.addEventListener('resize', handleOrientationChange.bind(null, element, updatedParams));
 }
 
-export default screenOrientation
+export { screenOrientation };
 
 
