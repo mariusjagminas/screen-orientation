@@ -1,6 +1,6 @@
 {
   "name": "screen-orientation-js",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Informs the user with an animated message that he shouldn't use the current app in landscape mode on mobile devices.",
   "main": "./dist/bundle.min.js",
   "files": [
@@ -11,6 +11,22 @@
     "build": "webpack --mode=production",
     "prepublishOnly": "webpack --mode=production"
   },
+  "dependencies": {},
+  "devDependencies": {
+    "clean-webpack-plugin": "^3.0.0",
+    "css-loader": "^3.4.2",
+    "style-loader": "^1.1.3",
+    "ts-loader": "^6.2.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "author": {
+    "name": "Marius Jagminas",
+    "email": "asmarenas@gmail.com",
+    "url": "https://mjagminas.com"
+  },
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/mariusjagminas/screen-orientation.git"
@@ -22,21 +38,5 @@
     "landscape",
     "mobile",
     "portrait"
-  ],
-  "author": {
-    "name": "Marius Jagminas",
-    "email": "asmarenas@gmail.com",
-    "url": "https://mjagminas.com"
-  },
-  "license": "MIT",
-  "devDependencies": {
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^3.4.2",
-    "style-loader": "^1.1.3",
-    "ts-loader": "^6.2.2",
-    "typescript": "^3.8.3",
-    "webpack": "^4.42.1",
-    "webpack-cli": "^3.3.11"
-  },
-  "dependencies": {}
+  ]
 }

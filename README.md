@@ -1,11 +1,16 @@
 # screen-orientation-js
 
+[![npm package][npm-badge]][npm]
+
+[npm]: https://www.npmjs.org/package/screen-orientation-js
+[npm-badge]: https://img.shields.io/npm/v/screen-orientation-js
+
 Displays an animated full-screen message when the mobile device's screen is rotated horizontally.
 
 Some applications or websites may display content properly only in portrait orientation on the mobile devices. To prevent the website's layout from breaking ,  ```screen-orientation-js```  informs the user that the app can't be viewed in landscape orientation.
   
 
-## Instalation
+## Installation
 
 ```
 $ npm install screen-orientation-js
@@ -52,16 +57,18 @@ Place ```<script>``` tag in the  ```<head>``` section.
 ```
 
 ## Options
-You can override the default configuration with custom settings.
 
-```js
-message: string // A custom message. Default: "Landscape orientation is not supported. Please rotate the device screen"
-color: string // Text color. Default: "#0000"
-fontSize: number // The font size depends on the width of the viewport. Recommended values 1-6. Default: 5
-bgColor: string // Background color. Default: "#ffff"
-animation: boolean // Displays the rotating phone animation. Default: true
-minHeight: number // The breakpoint in viewport height to display a message. Default: 500
-iconColor: string // Icon color. Default: "#1D1D1D"
-iconSize: number // Icon size. Default: 10
-```
+You can change the default settings by passing the config object. The default setting values will be used ​​for non-passed values.
+
+
+| Key          | Value type| Description                                       | Default value                              |
+|:-------------|:----------|:--------------------------------------------------|:------------------------------------------ |
+| `message:`   | string    | The custom message to display.                    | ""Landscape orientation is not support..." |        
+| `color:`     | string    | Text color.                                       |  #0000                                     |
+| `fontSize:`  | number    | Font size. Recommended values 1-6.                |  5                                         |
+| `bgColor:`   | string    | Background color.                                 |  #ffff                                     | 
+| `animation:` | boolean   | The rotating phone animation.                     |  true                                      |
+| `iconColor:` | string    | Icon color.                                       |  #1D1D1D                                   |
+| `iconSize:`  | number    | Icon size.                                        |  10                                        |
+| `minHeight:` | number    | Min viewport height in landscape mode for the component to be inactive| 500                    
   
